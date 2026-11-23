@@ -171,4 +171,15 @@ values(-100)
 select * from Orders
 */
 --==============================================
+--Q15. Create a schema named "Sales" and move the "Orders" table into this schema.
+create schema Sales
 
+alter schema  Sales
+transfer [dbo].[Orders] 
+
+/*
+--test
+select * from [dbo].[Orders]
+select * from Sales.[Orders]
+*/
+--==============================================
