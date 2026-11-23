@@ -158,5 +158,17 @@ create table Orders
 	total_amount decimal(10,2)
 )
 --==============================================
+--Q14. Add a check constraint to the "TotalAmount" column in the "Orders" table to ensure that it is greater than zero.
+alter table Orders
+add constraint chk_Orders_TotalAmount
+check (total_amount>0)
 
+/*
+--test
+insert into Orders(total_amount)
+values(-100)
+
+select * from Orders
+*/
+--==============================================
 
