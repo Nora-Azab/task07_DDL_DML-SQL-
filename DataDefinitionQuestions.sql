@@ -18,8 +18,13 @@ create table Employees
 alter table Employees
 add Department varchar(50)
 --==============================================
-
-
+--Q03. Remove the "Salary" column from the "Employees" table.
+alter table Employees
+drop column Salary
+--==============================================
+--Q04. Rename the "Department" column in the "Employees" table to "DeptName".
+exec sp_rename '[dbo].[Employees].Department' , 'DeptName' , 'column'
+--==============================================
 
 
 
