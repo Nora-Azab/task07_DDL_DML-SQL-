@@ -109,6 +109,18 @@ unique ([name])
 
 exec sp_help 'Employees'
 --==============================================
+--Q10. Create a table named "Customers" with columns for 
+--     CustomerID (integer), FirstName (varchar),
+--     LastName (varchar), and Email (varchar), and Status (varchar).
+create table Customers
+(
+	customer_id int ,
+	first_name varchar(20),
+	last_name varchar(20),
+	email varchar(100),
+	[status] varchar(10)
+)
+--==============================================
 
 
 
