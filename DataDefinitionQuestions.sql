@@ -147,5 +147,16 @@ select *
 from Customers
 */
 --==============================================
+--Q13. Create a table named "Orders" with columns for 
+--      OrderID (integer), CustomerID (integer), 
+--      OrderDate (datetime), and TotalAmount (decimal).
+create table Orders
+(
+	order_id int,
+	customer_id int,
+	order_date datetime2,
+	total_amount decimal(10,2)
+)
+--==============================================
 
 
