@@ -96,8 +96,12 @@ create table Employees_Projects
 
 )
 --==============================================
+--Q08. Remove the foreign key relationship between "Employees" and "Projects."
+exec sp_help 'Employees'
 
-
+alter table Employees
+drop work_on
+--==============================================
 
 
 
