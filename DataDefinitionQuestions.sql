@@ -5,7 +5,7 @@ go
 use CompanyTest
 go
 --==============================================
---1. Create a table named "Employees" with columns for ID (integer),Name (varchar), and Salary (decimal).
+--Q01. Create a table named "Employees" with columns for ID (integer),Name (varchar), and Salary (decimal).
 create table Employees
 (
 	id int,
@@ -13,7 +13,11 @@ create table Employees
 	salary decimal(10,2)
 )
 --==============================================
+--Q02. Add a new column named "Department" to the "Employees" table with data type varchar(50).
 
+alter table Employees
+add Department varchar(50)
+--==============================================
 
 
 
