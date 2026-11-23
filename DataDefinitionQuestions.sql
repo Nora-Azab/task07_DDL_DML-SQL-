@@ -183,3 +183,15 @@ select * from [dbo].[Orders]
 select * from Sales.[Orders]
 */
 --==============================================
+--Q16. Rename the "Orders" table to "SalesOrders."
+
+exec sp_rename '[Sales].[Orders]','SalesOrders'
+
+/*
+--test
+select * from [Sales].[Orders]
+select * from [Sales].SalesOrders
+*/
+--==============================================
+
+
