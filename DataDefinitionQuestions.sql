@@ -25,6 +25,13 @@ drop column Salary
 --Q04. Rename the "Department" column in the "Employees" table to "DeptName".
 exec sp_rename '[dbo].[Employees].Department' , 'DeptName' , 'column'
 --==============================================
+--Q05. Create a new table called "Projects" with columns for ProjectID (integer) and ProjectName (varchar).
+create table Projects
+(
+	project_id int,
+	project_name varchar(20)
+)
+--==============================================
 
 
 
