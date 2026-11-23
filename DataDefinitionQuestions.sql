@@ -81,4 +81,25 @@ add project_id int,
 constraint work_on
 foreign key(project_id) references Projects(project_id)
 --==============================================
+--Q07. Create a foreign key relationship between the
+--     "Employees" table (referencing "ID") and the
+--     "Projects" table (referencing "ProjectID").
+
+-- the second assumtion :-     but i will not exec it :)
+-- Employee -- M:M -- Project   -> third table "Employees_Projects"
+
+create table Employees_Projects
+(
+	emp_id  int foreign key references Employees(id),
+	proj_id int foreign key references Projects(project_id),
+	primary key(emp_id , proj_id)
+
+)
+--==============================================
+
+
+
+
+
+
 
