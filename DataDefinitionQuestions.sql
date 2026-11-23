@@ -102,6 +102,13 @@ exec sp_help 'Employees'
 alter table Employees
 drop work_on
 --==============================================
+--Q09. Add a unique constraint to the "Name" column in the "Employees" table.
+alter table Employees
+add constraint unique_Employees_name
+unique ([name])
+
+exec sp_help 'Employees'
+--==============================================
 
 
 
