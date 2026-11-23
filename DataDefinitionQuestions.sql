@@ -124,8 +124,28 @@ create table Customers
 --Q11. Add a unique constraint to the combination of "FirstName" and "LastName" columns in the "Customers" table.
 alter table Customers
 add constraint unique_Customers_first_name_Plus_last_name
+unique(first_name,last_name)
 
+/*
+--test
+insert into Customers(first_name , last_name)
+values
+('nora','azab'),
+('fareda','azab')
+*/
+--==============================================
+--Q12. Add a default value of 'Active' for the "Status" column in the "Customers" table, where the default value should be applied when a new record is inserted.
+alter table Customers
+add constraint default_Customers_status 
+default 'Active' for [status]
 
-
+/*
+--test
+insert into Customers(first_name)
+values('nour')
+select * 
+from Customers
+*/
+--==============================================
 
 
