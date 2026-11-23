@@ -32,6 +32,15 @@ create table Projects
 	project_name varchar(20)
 )
 --==============================================
+--Q06. Add a primary key constraint to the "Employees" table for the "ID" column.
+alter table Employees
+add constraint PK_Employees
+primary key (id)
 
+-- give me error [Cannot define PRIMARY KEY constraint on nullable column in table 'Employees'.]
+--so i will make the column "not null" first :)
+alter table Employees
+alter column id int not null
+--==============================================
 
 
