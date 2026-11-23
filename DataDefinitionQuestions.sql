@@ -121,6 +121,9 @@ create table Customers
 	[status] varchar(10)
 )
 --==============================================
+--Q11. Add a unique constraint to the combination of "FirstName" and "LastName" columns in the "Customers" table.
+alter table Customers
+add constraint unique_Customers_first_name_Plus_last_name
 
 
 
