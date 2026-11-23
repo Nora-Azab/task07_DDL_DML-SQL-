@@ -42,5 +42,43 @@ primary key (id)
 alter table Employees
 alter column id int not null
 --==============================================
+--Q07. Create a foreign key relationship between the
+--     "Employees" table (referencing "ID") and the
+--     "Projects" table (referencing "ProjectID").
 
+-- i assume :- 
+-- Employee -- M:1 -- Project    and the relationship (work_on)
+
+--1. make "project_id" not null -> to be PK in [Projects]
+alter table Projects
+alter column project_id int not null 
+-------
+--2. project_id  -> PK
+alter table Projects
+add constraint PK_Projects
+primary key(project_id)
+-------
+--3. now i can add fK in Employees -> refereneces Projects(project_id) 
+
+/*-- in this case SSMS -> will name the constraint itself :)
+alter table Employees
+add project_id int references Projects(project_id)
+
+exec sp_help 'Employees' --FK__Employees__proje__3A81B327
+
+alter table Employees
+drop FK__Employees__proje__3A81B327
+
+alter table Employees
+drop column project_id
+
+*/
+
+-- i need to add & name by myself at the same time :)
+-------
+alter table Employees
+add project_id int,
+constraint work_on
+foreign key(project_id) references Projects(project_id)
+--==============================================
 
