@@ -65,3 +65,10 @@ select distinct top 3 salary
 from Employees
 order by salary  desc
 --==============================================
+--Q10. Select all records from the "Employees" table, ordered by "Name" in ascending order
+select *
+from Employees
+order by name asc --by default  asc
+
+--==============================================
+
