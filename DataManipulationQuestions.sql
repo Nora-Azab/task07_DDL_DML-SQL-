@@ -24,3 +24,8 @@ from Employees
 select top 5 *
 from Employees
 --==============================================
+--Q05. Select all records from the "Employees" table, ordered by the "Salary" column in descending order.
+select *
+from Employees
+order by salary desc
+--==============================================
