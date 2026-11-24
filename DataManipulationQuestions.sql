@@ -16,6 +16,9 @@ truncate table Employees
 select [name] , salary
 from Employees
 --==============================================
-
+--Q03. Select distinct values of the "DeptName" column from the "Employees" table.
+select distinct DeptName
+from Employees
+--==============================================
 
 
