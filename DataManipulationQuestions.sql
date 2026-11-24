@@ -71,4 +71,18 @@ from Employees
 order by name asc --by default  asc
 
 --==============================================
+--Q11. Select the first 5 records from the "Employees" table,
+--     starting from the second record, 
+--     ordered by "Salary" in descending order.
+select * from Employees
+-------
+select *
+from (select top 5 *
+      from (select top 6 *
+            from Employees
+            order by salary desc) as tmp
+      order by salary asc) as tmp02
+order by salary desc
+--==============================================
+
 
