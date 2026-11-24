@@ -48,3 +48,6 @@ from(
         order by id desc) as tmp02
 order by id asc
 --==============================================
+--Q07. Select the average salary from the "Employees" table. (search on it)
+select avg(salary) as 'avg salary'
+from Employees
