@@ -34,4 +34,5 @@ select * from Employees
 
 select top 10 *
 from Employees
-where id != 1 and id !=2
+--where id != 1 and id !=2       --wrong =>  what if ids of the first rows are not 1,2 :)
+where id  not in (select top 2 id from employees)
