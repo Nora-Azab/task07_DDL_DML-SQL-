@@ -36,3 +36,15 @@ select top 10 *
 from Employees
 --where id != 1 and id !=2       --wrong =>  what if ids of the first rows are not 1,2 :)
 where id  not in (select top 2 id from employees)
+
+
+--another sol:)
+select *
+from(
+        select top 10 *
+        from (select top 12 *
+              from Employees
+              order by id) as tmp
+        order by id desc) as tmp02
+order by id asc
+--==============================================
