@@ -51,3 +51,8 @@ order by id asc
 --Q07. Select the average salary from the "Employees" table. (search on it)
 select avg(salary) as 'avg salary'
 from Employees
+--==============================================
+--Q08. Select the maximum and minimum salaries from the "Employees" table. (search on it)
+select min(salary) 'min salary',max(salary) 'max salary'
+from Employees
+--==============================================
