@@ -4,3 +4,18 @@
 select *
 from Employees
 --==============================================
+--Q02. Select only the "Name" and "Salary" columns from the "Employees" table.
+-----------
+--1. i dropped salary column before:)
+alter table Employees
+add salary decimal(10,2)
+-----------
+--2. i will modify the dummy data in Data/SampleData.sql after adding salary:)
+truncate table Employees 
+-----------
+select [name] , salary
+from Employees
+--==============================================
+
+
+
