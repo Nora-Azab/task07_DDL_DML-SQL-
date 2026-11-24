@@ -88,5 +88,11 @@ order by salary desc
 select sum(salary)
 from Employees
 --==============================================
+--Q13. Select records from the "Employees" table where the "Salary" is between 40000 and 60000, ordered by "Salary" in ascending order.
+select *
+from Employees
+where salary between 40000 and 60000 
+order by salary asc
+--==============================================
 
 
