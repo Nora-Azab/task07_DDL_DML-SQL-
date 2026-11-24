@@ -56,3 +56,12 @@ from Employees
 select min(salary) 'min salary',max(salary) 'max salary'
 from Employees
 --==============================================
+--Q09. Select the top 3 highest salaries from the "Employees" table.
+select  top 3 salary -- with ties salary
+from Employees
+order by salary  desc
+--------
+select distinct top 3 salary 
+from Employees
+order by salary  desc
+--==============================================
