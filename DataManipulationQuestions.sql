@@ -20,5 +20,7 @@ from Employees
 select distinct DeptName
 from Employees
 --==============================================
-
-
+--Q04. Select the top 5 records from the "Employees" table.
+select top 5 *
+from Employees
+--==============================================
