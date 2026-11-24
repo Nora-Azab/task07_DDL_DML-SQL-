@@ -29,3 +29,9 @@ select *
 from Employees
 order by salary desc
 --==============================================
+--Q06. Select the first 10 records from the "Employees" table, starting from the third record.
+select * from Employees
+
+select top 10 *
+from Employees
+where id != 1 and id !=2
