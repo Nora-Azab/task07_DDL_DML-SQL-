@@ -84,5 +84,9 @@ from (select top 5 *
       order by salary asc) as tmp02
 order by salary desc
 --==============================================
+--Q12. Select the sum of all salaries from the "Employees" table. (search on it)
+select sum(salary)
+from Employees
+--==============================================
 
 
